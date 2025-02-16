@@ -6,18 +6,17 @@
   <title>Kraxor - Synchronizing the Future of Decentralized Finance</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Inline styles for hero background animation -->
+  <!-- Inline styles for hero background animation and CA box -->
   <style>
-    /* Animated dark gradient background for the hero section only */
+    /* Animated gradient background for the hero section only */
     .hero-background-animation {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(-45deg, #111, #222, #333, #444);
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
       z-index: -2;
@@ -32,6 +31,32 @@
       100% {
         background-position: 0% 50%;
       }
+    }
+    
+    /* New styles for the CA box in the hero section with a static gradient border */
+    .hero-ca-box {
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      position: relative;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      max-width: 80%;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .hero-ca-box::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     }
   </style>
 </head>
@@ -61,10 +86,9 @@
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <h2>Synchronizing the Future of Decentralized Finance</h2>
-      <!-- New spot for CA content -->
-      <div class="hero-ca">[Your CA Content Here]</div>
       <p>Revolutionizing blockchain with adaptive consensus and quantum-resistant security.</p>
-      <a href="#about" class="btn">Learn More</a>
+      <!-- CA box with static gradient border -->
+      <div class="hero-ca-box">CA: Coming Soon</div>
     </div>
   </header>
 
@@ -114,34 +138,45 @@
     </div>
   </section>
 
-  <!-- Roadmap Section -->
-  <section id="roadmap">
+<!-- Roadmap Section -->
+<section id="roadmap">
     <div class="container section-content">
       <h2>Roadmap</h2>
       <ul class="roadmap-list">
         <li>
           <h3>Q1 2025</h3>
-          <p>Concept development and team formation.</p>
+          <p>
+            Initiate in-depth requirements analysis and feasibility studies, finalize architectural blueprints, and research advanced consensus models (including Byzantine Fault Tolerance and hybrid Proof-of-Stake variants) for robust scalability.
+          </p>
         </li>
         <li>
           <h3>Q3 2025</h3>
-          <p>Initial blockchain prototype and private testing.</p>
+          <p>
+            Develop and deploy an experimental blockchain prototype leveraging hybrid consensus and dynamic sharding techniques; perform extensive internal stress tests, security audits, and validation of cryptographic primitives (Merkle trees, SNARKs, etc.).
+          </p>
         </li>
         <li>
           <h3>Q1 2026</h3>
-          <p>Public beta launch with early adopter integration.</p>
+          <p>
+            Launch the public beta integrating smart contract frameworks, tokenomics simulations, and advanced cryptographic protocols (zero-knowledge proofs and quantum-resistant algorithms) to evaluate network throughput, latency, and fault tolerance.
+          </p>
         </li>
         <li>
           <h3>Q3 2026</h3>
-          <p>Full network deployment with enhanced security features.</p>
+          <p>
+            Roll out the mainnet with full decentralization, deploying multi-layered security enhancements (including multi-signature schemes and real-time anomaly detection), decentralized governance modules, and secure cross-chain interoperability via protocol bridges.
+          </p>
         </li>
         <li>
           <h3>2027 and Beyond</h3>
-          <p>Global expansion, cross-chain integrations, and continuous improvements.</p>
+          <p>
+            Achieve global scaling with adaptive sharding and Layer-2 solutions, continuous integration of next-generation cryptographic standards, and ecosystem-wide interoperability through secure interconnectivity protocols.
+          </p>
         </li>
       </ul>
     </div>
   </section>
+  
 
   <!-- Team Section -->
   <section id="team">
